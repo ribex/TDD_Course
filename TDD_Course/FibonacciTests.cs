@@ -7,12 +7,19 @@ using System.Threading.Tasks;
 
 namespace TDD_Course
 {
+    //Sequence of Fibonacci numbers
+    //1, 1, 2, 3, 5, 8, 13, 21, 34
+    //or
+    //0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
     [TestFixture]
     public class FibonacciTests
     {
         [TestCase(0, 0)]
         [TestCase(1, 1)]
         [TestCase(1, 2)]
+        [TestCase(2, 3)]
+        [TestCase(3, 4)]
         public void TestFibonacci(int expected, int index)
         {
             Assert.AreEqual(expected, GetFibonacci(index));
@@ -24,9 +31,13 @@ namespace TDD_Course
             {
                 return 0;
             }
-            else
+            else if (index <= 2)
             {
                 return 1;
+            }
+            else
+            {
+                return GetFibonacci(index - 1) + GetFibonacci(index - 2);
             }
         }
     }
