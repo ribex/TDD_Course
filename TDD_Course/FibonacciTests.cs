@@ -10,23 +10,23 @@ namespace TDD_Course
     [TestFixture]
     public class FibonacciTests
     {
-        [Test]
-        public void TestFibonacci()
+        [TestCase(0, 0)]
+        [TestCase(1, 1)]
+        [TestCase(1, 2)]
+        public void TestFibonacci(int expected, int index)
         {
-            Assert.AreEqual(0, GetFibonacci(0));
-            Assert.AreEqual(1, GetFibonacci(1));
-
+            Assert.AreEqual(expected, GetFibonacci(index));
         }
 
         private int GetFibonacci(int index)
         {
-            if (index == 1)
+            if (index == 0)
             {
-                return 1;
+                return 0;
             }
             else
             {
-                return 0;
+                return 1;
             }
         }
     }
