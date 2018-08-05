@@ -20,6 +20,11 @@ namespace TDD_Course
         [TestCase(1, 2)]
         [TestCase(2, 3)]
         [TestCase(3, 4)]
+        [TestCase(5, 5)]
+        [TestCase(8, 6)]
+        [TestCase(13, 7)]
+        [TestCase(21, 8)]
+        [TestCase(34, 9)]
         public void TestFibonacci(int expected, int index)
         {
             Assert.AreEqual(expected, GetFibonacci(index));
@@ -31,7 +36,7 @@ namespace TDD_Course
             {
                 return 0;
             }
-            else if (index <= 2)
+            else if (index == 1)
             {
                 return 1;
             }
