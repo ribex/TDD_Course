@@ -10,6 +10,11 @@ namespace TDD_Course
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(NaiveCanonicalizer.GetCanonicalForm("Orange Is The New Black"));
+            Console.WriteLine(NaiveCanonicalizer.GetCanonicalForm("is The New black Orange"));
+            Console.WriteLine(NaiveCanonicalizer.GetCanonicalForm("The neW Black OranGe Is"));
+
+            Console.Read();
         }
     }
 }
