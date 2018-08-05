@@ -10,6 +10,8 @@ namespace TDD_Course
     {
         public static string GetCanonicalForm(string searchTerm)
         {
+            if (string.IsNullOrWhiteSpace(searchTerm))
+                throw new ArgumentNullException("searchTerm");
             return searchTerm
                 .Split(new[] { ' ' })
                 .Select(x => x.ToUpper())
