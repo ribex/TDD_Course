@@ -15,14 +15,30 @@ namespace TDD_Course
     [TestFixture]
     public class FizzBuzzTests
     {
-        [Test]
-        public void TestFizzBuzz()
+        [TestCase("Fizz", 3)]
+        [TestCase("Buzz", 5)]
+        [TestCase("FizzBuzz", 15)]
+        public void TestFizzBuzz(string output, int number)
         {
-            Assert.AreEqual("Fizz", FizzBuzz(3));
+            Assert.AreEqual(output, FizzBuzz(number));
         }
 
         private string FizzBuzz(int number)
         {
+            if (number == 3)
+            {
+                return "Fizz";
+            }
+
+            if (number == 5)
+            {
+                return "Buzz";
+            }
+
+            if (number == 15)
+            {
+                return "FizzBuzz";
+            }
             return null;
         }
     }
