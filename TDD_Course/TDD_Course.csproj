@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FibonacciTests.cs" />
+    <Compile Include="FizzBuzzTests.cs" />
     <Compile Include="NaiveCanonicalizer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
